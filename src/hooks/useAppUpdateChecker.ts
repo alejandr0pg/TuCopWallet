@@ -5,7 +5,7 @@ import { checkForAppUpdate, showUpdateDialog, UpdateCheckResult } from 'src/util
 import Logger from 'src/utils/Logger'
 
 const TAG = 'hooks/useAppUpdateChecker'
-const UPDATE_CHECK_INTERVAL = 24 * 60 * 60 * 1000 // 24 horas en milisegundos
+const UPDATE_CHECK_INTERVAL = 60 * 60 * 1000 // 1 hora en milisegundos
 const LAST_UPDATE_CHECK_KEY = 'lastUpdateCheckTimestamp'
 const UPDATE_DISMISSED_KEY = 'updateDismissedVersion'
 
@@ -20,7 +20,7 @@ export interface UseAppUpdateCheckerOptions {
   checkOnAppStart?: boolean
   /** Verificar cuando la app vuelve del background */
   checkOnAppResume?: boolean
-  /** Intervalo de verificación en milisegundos (por defecto 24 horas) */
+  /** Intervalo de verificación en milisegundos (por defecto 1 hora) */
   checkInterval?: number
 }
 
